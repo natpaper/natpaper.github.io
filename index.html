@@ -70,3 +70,14 @@ dis_fake_loss = kl_divergence(tf.ones_like(fake_logits, tf.float32) / num_logits
 dis_fake_loss2 = kl_divergence(tf.ones_like(fake_logits2, tf.float32) / num_logits, tf.nn.softmax(fake_logits2))
 </pre>
 set class number=10, batchsize=256, and you'd better add negative samples every 10 batches to allow model converge better.
+<br>
+There are some generated samples:<br>
+NAT-GAN: <img src="nat.png" width="400" height="400" /> <br>
+NAT-GAN_1: <img src="nat_1.png" width="400" height="400" /> <br>
+NAT-GAN_3: <img src="nat_3.png" width="400" height="400" /> <br>
+NAT-GAN_10: <img src="nat_10.png" width="400" height="400" /> <br>
+CatGAN: <img src="catgan.png" width="400" height="400" /> <br>
+CatGAN_1: <img src="catgan_1.png" width="400" height="400" /> <br>
+CatGAN_3: <img src="catgan_3.png" width="400" height="400" /> <br>
+CatGAN_10: <img src="catgan_10.png" width="400" height="400" /> <br>
+AM GAN: <img src="amgan.png" width="400" height="400" /> <br>
