@@ -10,7 +10,7 @@ Code of 1D GAN is based on <a href=https://github.com/AYLIEN/gan-intro>gan-intro
 <br>
 The two negative distributions are:
 <pre>
-class NegDistribution(object):
+class NegDist(object):
     def __init__(self):
         self.mu = 13
         self.sigma = 1
@@ -20,7 +20,7 @@ class NegDistribution(object):
         samples.sort()
         return samples
 
-class NegDistribution2(object):
+class NegDist2(object):
     def __init__(self):
         self.mu = -6
         self.sigma = 2
@@ -34,7 +34,7 @@ class NegDistribution2(object):
 Our supervised classification code on CIFAR 10 is based on <a href=https://github.com/kuangliu/pytorch-cifar>pytorch-cifar</a>. <br>
 We implement the criterion:
 <pre>
-class NeutralCE(nn.Module):
+class NATLoss(nn.Module):
     def __init__(self):
         super(NeutralCE, self).__init__()
         self.ce = nn.CrossEntropyLoss()
