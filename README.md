@@ -1,1 +1,0 @@
-# natpaper.github.io
