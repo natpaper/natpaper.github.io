@@ -1,20 +1,32 @@
 # Negative-Aware Training
 
+**Please use Chrome to display video.**
+
+## 1D GAN
+
 <div style="display: flex;justify-content:center; align-items:Center;">
     <video muted src="natgan3.mp4" type="video/mp4" controls="" autoplay="autoplay" loop="loop" width="1000px" height="600px">
     </video>
 </div>
 
-**Please use Chrome to display video.**
-
-## 1D GAN
+This video (natgan3.mp4) can be found in this folder.
 
 Code of 1D GAN is based on [gan-intro](https://github.com/AYLIEN/gan-intro)
 
-The two negative distributions are:
+The distributions are:
 
 ``` python
-class NegDist(object):
+class DataDist:
+    def __init__(self):
+        self.mu = 4
+        self.sigma = 0.5
+
+    def sample(self, N):
+        samples = np.random.normal(self.mu, self.sigma, N)
+        samples.sort()
+        return samples
+
+class NegDist:
     def __init__(self):
         self.mu = 13
         self.sigma = 1
@@ -24,7 +36,7 @@ class NegDist(object):
         samples.sort()
         return samples
 
-class NegDist2(object):
+class NegDist2:
     def __init__(self):
         self.mu = -6
         self.sigma = 2
@@ -33,6 +45,34 @@ class NegDist2(object):
         samples = np.random.normal(self.mu, self.sigma, N)
         samples.sort()
         return samples
+```
+
+## 2D GAN
+
+<div style="display: flex;justify-content:center; align-items:Center;">
+    <video muted src="nat2d.mp4" type="video/mp4" controls="" autoplay="autoplay" loop="loop" width="1000px" height="600px">
+    </video>
+</div>
+
+This video (nat2d.mp4) can be found in this folder.
+
+The distributions are:
+
+``` python
+class DataDist:
+    def sample(self):
+        x, y = make_circles(n_samples=2000, noise=.08)
+        return x[y == 0] * 4
+        
+class NegDist1:
+    def sample(self, N):
+        x, y = make_circles(n_samples=2000, noise=.08)
+        return x[y == 0] * 8
+
+class NegDist2(object):
+    def sample(self, N):
+        x, y = make_circles(n_samples=2000, noise=.5)
+        return x[y == 0] * 0.7
 ```
 
 ## NAT on supervised classification
@@ -83,22 +123,6 @@ dis_fake_loss2 = kl_divergence(tf.ones_like(fake_logits2, tf.float32) / num_logi
 
 Set class number=10, batchsize=256, and you'd better add negative samples every 10 batches to allow model converge better.
 
-There are some generated samples:
+Some generated samples are available in this folder: 
 
-NAT-GAN: ![nat.png](nat.png)
-
-NAT-GAN_1: ![nat_1.png](nat_1.png)
-
-NAT-GAN_3: ![nat_3.png](nat_3.png)
-
-NAT-GAN_10: ![nat_10.png](nat_10.png)
-
-CatGAN: ![catgan.png](catgan.png)
-
-CatGAN_1: ![catgan_1.png](catgan_1.png)
-
-CatGAN_3: ![catgan_3.png](catgan_3.png)
-
-CatGAN_10: ![catgan_10.png](catgan_10.png)
-
-AM GAN: ![amgan.png](amgan.png)
+> NAT-GAN, NAT-GAN_1, NAT-GAN_10, CatGAN, CatGAN_1, CatGAN_3, CatGAN_10, AM GAN
