@@ -11,7 +11,7 @@
 
 This video (natgan3.mp4) can be found in [github](https://github.com/natpaper/natpaper.github.io).
 
-Code of 1D GAN is based on [gan-intro](https://github.com/AYLIEN/gan-intro)
+Code of 1D GAN is based on [gan-intro](https://github.com/AYLIEN/gan-intro).
 
 The distributions are:
 
@@ -56,7 +56,7 @@ class NegDist2:
     </video>
 </div>
 
-This video (nat2d.mp4) can be found in [github](https://github.com/natpaper/natpaper.github.io)..
+This video (nat2d.mp4) can be found in [github](https://github.com/natpaper/natpaper.github.io).
 
 The distributions are:
 
