@@ -123,6 +123,6 @@ dis_fake_loss2 = kl_divergence(tf.ones_like(fake_logits2, tf.float32) / num_logi
 
 Set class number=10, batchsize=256, and you'd better add negative samples every 10 batches to allow model converge better.
 
-Some generated samples are available in this folder: 
+Some generated samples are available in [natpaper github](https://github.com/natpaper/natpaper.github.io): 
 
 > NAT-GAN, NAT-GAN_1, NAT-GAN_10, CatGAN, CatGAN_1, CatGAN_3, CatGAN_10, AM GAN
