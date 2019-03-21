@@ -54,7 +54,7 @@ class NegDist2:
     </video>
 </div>
 
-This video (nat2d.mp4) can be found in this folder [natpaper github](https://github.com/natpaper/natpaper.github.io)..
+This video (nat2d.mp4) can be found in [natpaper github](https://github.com/natpaper/natpaper.github.io)..
 
 The distributions are:
 
