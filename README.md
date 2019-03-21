@@ -1,6 +1,6 @@
 # Negative-Aware Training
 
-**Please use Chrome to display video.**
+**Please use Chrome to display videos, it may take a few seconds to load.**
 
 ## 1D GAN
 
