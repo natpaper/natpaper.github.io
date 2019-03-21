@@ -47,6 +47,8 @@ class NegDist2:
         return samples
 ```
 
+**Note: Discriminators of 1D and 2D NAT are outputting (by sigmoid) 0 for fake and neg data, and 1 for real, they are different from NAT-GAN on CIFAR 10, which output 0.1s for fake and neg data.**
+
 ## 2D GAN
 
 <div style="display: flex;justify-content:center; align-items:Center;">
