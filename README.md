@@ -9,7 +9,7 @@
     </video>
 </div>
 
-This video (natgan3.mp4) can be found in [natpaper github](https://github.com/natpaper/natpaper.github.io).
+This video (natgan3.mp4) can be found in [github](https://github.com/natpaper/natpaper.github.io).
 
 Code of 1D GAN is based on [gan-intro](https://github.com/AYLIEN/gan-intro)
 
@@ -54,7 +54,7 @@ class NegDist2:
     </video>
 </div>
 
-This video (nat2d.mp4) can be found in [natpaper github](https://github.com/natpaper/natpaper.github.io)..
+This video (nat2d.mp4) can be found in [github](https://github.com/natpaper/natpaper.github.io)..
 
 The distributions are:
 
@@ -125,6 +125,6 @@ dis_fake_loss2 = kl_divergence(tf.ones_like(fake_logits2, tf.float32) / num_logi
 
 Set class number=10, batchsize=256, and you'd better add negative samples every 10 batches to allow model converge better.
 
-Some generated samples are available in [natpaper github](https://github.com/natpaper/natpaper.github.io): 
+Some generated samples are available in [github](https://github.com/natpaper/natpaper.github.io): 
 
 > NAT-GAN, NAT-GAN_1, NAT-GAN_10, CatGAN, CatGAN_1, CatGAN_3, CatGAN_10, AM GAN
