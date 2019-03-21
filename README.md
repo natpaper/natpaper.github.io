@@ -59,6 +59,8 @@ This video (nat2d.mp4) can be found in this folder [natpaper github](https://git
 The distributions are:
 
 ``` python
+from sklearn.datasets import make_circles
+
 class DataDist:
     def sample(self):
         x, y = make_circles(n_samples=2000, noise=.08)
