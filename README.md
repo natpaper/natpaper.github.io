@@ -73,11 +73,13 @@ class NegDist1:
         x, y = make_circles(n_samples=2000, noise=.08)
         return x[y == 0] * 8
 
-class NegDist2(object):
+class NegDist2:
     def sample(self, N):
         x, y = make_circles(n_samples=2000, noise=.5)
         return x[y == 0] * 0.7
 ```
+
+Note: The negative distribution may increase the difficulty of discriminator, hence you may need to decrease the weight of negative loss.
 
 ## NAT on supervised classification
 
