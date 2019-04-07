@@ -116,7 +116,9 @@ n01749939, n01753488, n01756291, n01773797, n01774384, n01775062, n01774750, n01
 
 ## NAT-GAN on CIFAR 10
 
-For NAT-GAN on CIFAR 10, code will be available soon, and you can easily implement it by modifying 
+![](scores6.svg)
+
+For NAT-GAN on CIFAR 10, negative data is CIFAR 100, and code will be available soon, and you can easily implement it by modifying 
 [AM GAN](https://github.com/ZhimingZhou/AM-GAN2), some important codes are:
 
 ``` python
@@ -135,6 +137,6 @@ Some generated samples are available in [github](https://github.com/natpaper/nat
 
 ## NAT-GAN on MNIST
 
-Negative samples for MNIST is Fashion MNIST, below is the comparison of NAT and original AM GAN baseline.
+Negative data for MNIST is Fashion MNIST, below is the comparison of NAT and original AM GAN baseline, which means that negative information helps adversial procedure.
 
 ![](mnist_scores_fashion.svg)
