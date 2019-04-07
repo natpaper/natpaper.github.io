@@ -114,7 +114,7 @@ n01692333, n01694178, n01695060, n01688243, n01693334, n01689811, n01728572, n01
 n01749939, n01753488, n01756291, n01773797, n01774384, n01775062, n01774750, n01776313, n01774384
 ```
 
-## NAT-GAN
+## NAT-GAN on CIFAR 10
 
 For NAT-GAN on CIFAR 10, code will be available soon, and you can easily implement it by modifying 
 [AM GAN](https://github.com/ZhimingZhou/AM-GAN2), some important codes are:
@@ -132,3 +132,9 @@ Set class number=10, batchsize=256, and you'd better add negative samples every 
 Some generated samples are available in [github](https://github.com/natpaper/natpaper.github.io): 
 
 > NAT-GAN, NAT-GAN_1, NAT-GAN_10, CatGAN, CatGAN_1, CatGAN_3, CatGAN_10, AM GAN
+
+## NAT-GAN on MNIST
+
+Negative samples for MNIST is Fashion MNIST, below is the comparison of NAT and original AM GAN baseline.
+
+![](mnist_scores_fashion.svg)
