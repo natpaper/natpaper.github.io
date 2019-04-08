@@ -137,6 +137,6 @@ Some generated samples are available in [github](https://github.com/natpaper/nat
 
 ## NAT-GAN on MNIST
 
-Negative data for MNIST is Fashion MNIST, below is the comparison of NAT and original AM GAN baseline, which means that negative information helps adversial procedure.
+Negative data for MNIST are Fashion MNIST and CIFAR 10, below is the comparison of NAT and original AM GAN baseline, which means that negative information helps adversial procedure.
 
-![](mnist_scores_fashion.svg)
+![](mnist_scores.svg)
