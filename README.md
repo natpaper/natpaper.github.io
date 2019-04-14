@@ -83,9 +83,9 @@ Note: The negative distribution may increase the difficulty of discriminator, he
 
 ## NAT on MNIST
 
-Fashion Mnist is the negative dataset.
+Fashion MNIST is the negative dataset.
 
-|Test Sets|Fashion Mnist Train|Fashion Mnist Test|Random|
+|Test Sets|Fashion MNIST Train|Fashion MNIST Test|Random|
 |:-:|:-:|:-:|:-:|
 |NCR 0.4 baseline|0.853|0.556|0.987|
 |NCR 0.4 NAT|0.0006|0.0014|0.0044|
@@ -96,6 +96,7 @@ Fashion Mnist is the negative dataset.
 |NCR 0.9 baseline|0.192|0.192|0.538|
 |NCR 0.9 NAT|0|0|0|
 
+If use CIFAR 10 (gray scale) as negative dataset, the random results are poor.
 
 ## NAT on CIFAR 10
 
