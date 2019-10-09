@@ -152,8 +152,10 @@ Some generated samples are available in [github](https://github.com/natpaper/nat
 
 > NAT-GAN, NAT-GAN_1, NAT-GAN_10, CatGAN, CatGAN_1, CatGAN_3, CatGAN_10, AM GAN
 
-## NAT-GAN on MNIST
+## Generator losses of NAT-GAN on multiple datasets
 
-Negative data for MNIST are Fashion MNIST and CIFAR 10, below is the comparison of NAT and original AM GAN baseline, which means that negative information helps adversial procedure.
 
-![](mnist_scores.svg)
+![](mnist_emnist_loss.svg)
+![](svhn_cifar100_loss.svg)
+![](cifar10_cifar100_loss.svg)
+![](tiny_100_loss.svg)
