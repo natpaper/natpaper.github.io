@@ -81,7 +81,7 @@ class NegDist2:
 
 Note: The negative distribution may increase the difficulty of discriminator, hence you may need to decrease the weight of negative loss.
 
-## NAT on CIFAR 10
+## NAT Implementation
 
 Our supervised classification code on CIFAR 10 is based on [pytorch-cifar](https://github.com/kuangliu/pytorch-cifar).
 
@@ -114,11 +114,9 @@ n01692333, n01694178, n01695060, n01688243, n01693334, n01689811, n01728572, n01
 n01749939, n01753488, n01756291, n01773797, n01774384, n01775062, n01774750, n01776313, n01774384
 ```
 
-## NAT-GAN on CIFAR 10
+## NAT-GAN Implementation
 
-![](scores6.svg)
-
-For NAT-GAN on CIFAR 10, negative data is CIFAR 100, and code will be available soon, and you can easily implement it by modifying 
+For NAT-GAN, code will be available soon, and you can easily implement it by modifying 
 [AM GAN](https://github.com/ZhimingZhou/AM-GAN2), some important codes are:
 
 ``` python
@@ -129,16 +127,4 @@ dis_fake_loss = kl_divergence(tf.ones_like(fake_logits, tf.float32) / num_logits
 dis_fake_loss2 = kl_divergence(tf.ones_like(fake_logits2, tf.float32) / num_logits, tf.nn.softmax(fake_logits2))
 ```
 
-Set class number=10, batchsize=256, and you'd better add negative samples every 10 batches to allow model converge better.
-
-Some generated samples are available in [github](https://github.com/natpaper/natpaper.github.io): 
-
-> NAT-GAN, NAT-GAN_1, NAT-GAN_10, CatGAN, CatGAN_1, CatGAN_3, CatGAN_10, AM GAN
-
-## Generator losses of NAT-GAN on multiple datasets
-
-
-![](mnist_emnist_loss.svg)
-![](svhn_cifar100_loss.svg)
-![](cifar10_cifar100_loss.svg)
-![](tiny_100_loss.svg)
+You'd better add negative samples every 10 batches to allow models converge better.
