@@ -127,4 +127,4 @@ dis_fake_loss = kl_divergence(tf.ones_like(fake_logits, tf.float32) / num_logits
 dis_fake_loss2 = kl_divergence(tf.ones_like(fake_logits2, tf.float32) / num_logits, tf.nn.softmax(fake_logits2))
 ```
 
-You'd better add negative samples every 10 batches to allow models converge better.
+Negative samples may be added every 10 batches to allow models converge better.
