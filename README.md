@@ -142,6 +142,52 @@ dis_fake_loss2 = kl_divergence(tf.ones_like(fake_logits2, tf.float32) / num_logi
 
 Negative samples may be added every 10 batches to allow models converge better.
 
+## GAN evaluation metrics
+
+<head>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            inlineMath: [['$','$']]
+            }
+        });
+    </script>
+</head>
+
+Inception Score (IS) is well correlated with human evaluation, AM Score is proposed
+to measure the quality of generated samples as a compensation of IS. They are calculated via:
+$$\text{Inception Score}  = \exp \left( \mathbb { E } _ { x \sim G } [ \mathrm { KL } ( C ( x ) \|
+  \overline { C } ^ { G } ) ] \right), \\
+  \text{AM Score} \triangleq \mathrm { KL } \left( \overline { C } ^ { \text { train } } \|
+  \overline { C } ^ { G } \right) + \mathbb { E } _ { x } [ H ( C ( x ) ) ],$$
+where $\overline { C } ^ { G } = \mathbb { E } _ { x } [ C ( x ) ]$
+is the overall probability distribution of the generated
+samples over classes judged by $C$. AM Score requires $\overline { C } ^ { G }$ close
+to $\overline { C } ^ { \text { train } }$ and each sample $x$ has a
+low entropy $C(x)$. The minimal value of AM Score is zero and the smaller the better.
+Inception Score requires each sample’s distribution $C(x)$ different
+from the overall distribution of the generator 
+$\overline { C } ^ { G }$, which indicates good diversity and quality
+over the generated samples. Steady and smooth gradient information
+is given as the discriminator loss of ours
+explicitly punishes KL divergence between
+distributions of real and generated, but generator optimizes
+KL divergence, and this adversarial procedure matches the
+goals of Inception Score and AM Score.
+FID compares the statistics of generated samples to real samples:
+
+$$\mathrm{FID}(x, g) &=\left\|\mu_{x}-\mu_{g}\right\|_{2}^{2} \\
+    &+\operatorname{Tr}\left(\Sigma_{x}+\Sigma_{g}-2\left(
+    \Sigma_{x} \Sigma_{g}\right)^{\frac{1}{2}}\right),$$
+    
+where $x$ is short of $x \sim p_{data}$ and $g$ is short of $x \sim G$.
+$\mu, \Sigma, \operatorname{Tr}$ are mean, covariance and
+diagonal elements sum respectively.
+FID measures the quality and diversity of generated samples and is
+sensitive to diversity especially. 
+
 ## Generator losses of NAT-GAN on multiple datasets
 
 ![](mnist_emnist_loss.svg)
