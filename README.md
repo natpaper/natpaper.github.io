@@ -83,8 +83,8 @@ Note: The negative distribution may increase the difficulty of discriminator, he
 
 ## NAT Implementation
 
-![](ori_data.eps)
-![](ori_data.eps)
+![](ori_data.png)
+![](ori_data.png)
 
 Our supervised classification code on CIFAR 10 is based on [pytorch-cifar](https://github.com/kuangliu/pytorch-cifar).
 
