@@ -83,6 +83,9 @@ Note: The negative distribution may increase the difficulty of discriminator, he
 
 ## NAT Implementation
 
+![](ori_data.eps)
+![](ori_data.eps)
+
 Our supervised classification code on CIFAR 10 is based on [pytorch-cifar](https://github.com/kuangliu/pytorch-cifar).
 
 We implement the criterion:
@@ -128,3 +131,10 @@ dis_fake_loss2 = kl_divergence(tf.ones_like(fake_logits2, tf.float32) / num_logi
 ```
 
 Negative samples may be added every 10 batches to allow models converge better.
+
+## Generator losses of NAT-GAN on multiple datasets
+
+![](mnist_emnist_loss.svg)
+![](svhn_cifar100_loss.svg)
+![](cifar10_cifar100_loss.svg)
+![](tiny_100_loss.svg)
