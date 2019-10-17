@@ -83,8 +83,10 @@ Note: The negative distribution may increase the difficulty of discriminator, he
 
 ## NAT Implementation
 
+NAT figure explanation:
+
 ![](ori_data.png)
-![](ori_data.png)
+![](nat_data.png)
 
 Our supervised classification code on CIFAR 10 is based on [pytorch-cifar](https://github.com/kuangliu/pytorch-cifar).
 
@@ -116,6 +118,14 @@ n01629819, n01630670, n01632458, n01631663, n01632777, n01689811, n01693334, n01
 n01692333, n01694178, n01695060, n01688243, n01693334, n01689811, n01728572, n01751748, n01755581, 
 n01749939, n01753488, n01756291, n01773797, n01774384, n01775062, n01774750, n01776313, n01774384
 ```
+
+## NCR result
+
+The maximum predictions of baseline (blue) and NAT (red) on CIFAR 100 test set.
+Most predictions of baseline are of incorrect
+high confidences, while NAT is more robust on negative samples.
+
+![](max_pred4.png)
 
 ## NAT-GAN Implementation
 
