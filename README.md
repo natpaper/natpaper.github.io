@@ -158,10 +158,12 @@ Negative samples may be added every 10 batches to allow models converge better.
 
 Inception Score (IS) is well correlated with human evaluation, AM Score is proposed
 to measure the quality of generated samples as a compensation of IS. They are calculated via:
+
 $$\text{Inception Score}  = \exp \left( \mathbb { E } _ { x \sim G } [ \mathrm { KL } ( C ( x ) \|
   \overline { C } ^ { G } ) ] \right), \\
   \text{AM Score} \triangleq \mathrm { KL } \left( \overline { C } ^ { \text { train } } \|
   \overline { C } ^ { G } \right) + \mathbb { E } _ { x } [ H ( C ( x ) ) ],$$
+  
 where $\overline { C } ^ { G } = \mathbb { E } _ { x } [ C ( x ) ]$
 is the overall probability distribution of the generated
 samples over classes judged by $C$. AM Score requires $\overline { C } ^ { G }$ close
@@ -178,8 +180,8 @@ KL divergence, and this adversarial procedure matches the
 goals of Inception Score and AM Score.
 FID compares the statistics of generated samples to real samples:
 
-$$\mathrm{FID}(x, g) &=\left\|\mu_{x}-\mu_{g}\right\|_{2}^{2} \\
-    &+\operatorname{Tr}\left(\Sigma_{x}+\Sigma_{g}-2\left(
+$$\mathrm{FID}(x, g) =\left\|\mu_{x}-\mu_{g}\right\|_{2}^{2} 
+    +\operatorname{Tr}\left(\Sigma_{x}+\Sigma_{g}-2\left(
     \Sigma_{x} \Sigma_{g}\right)^{\frac{1}{2}}\right),$$
     
 where $x$ is short of $x \sim p_{data}$ and $g$ is short of $x \sim G$.
