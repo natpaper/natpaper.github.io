@@ -190,6 +190,34 @@ diagonal elements sum respectively.
 FID measures the quality and diversity of generated samples and is
 sensitive to diversity especially. 
 
+## NAT-GAN results
+
+NCR overfit results trained on CIFAR 10 and ILSVRC samples
+
+|Test Sets | ILSVRC Train | ILSVRC Test | CIFAR 100 Noise | Random |
+|:-:|:-:|:-:|:-:|:-:|
+|${NCR}_{0.4}$   | 0  | 0.079  | 0.597     | 1      
+|${NCR}_{0.6}$   | 0  | 0.047  | 0.464     | 1      
+|${NCR}_{0.8}$   | 0  | 0.025  | 0.349     | 0.051  
+|${NCR}_{0.9}$   | 0  | 0.014  | 0.262     | 0      
+
+CIFAR 10 NCR results of 8, 32, 64 negative samples per batch (batch size 128)
+
+|Test Sets | CIFAR 100 Train Set  | CIFAR 100 Test Set | ILSVRC | Random  Noise   |
+|:-:|:-:|:-:|:-:|:-:|
+|8/batch| ${NCR}_{0.4}$ | 0.123     | 0.155  | 0.218  | 0.142 |
+|8/batch| ${NCR}_{0.6}$ | 0.077     | 0.111  | 0.154  | 0.001 |
+|8/batch| ${NCR}_{0.8}$ | 0.045     | 0.073  | 0.104  | 0     |
+|8/batch| ${NCR}_{0.9}$ | 0.029     | 0.052  | 0.076  | 0     |
+|32/batch|${NCR}_{0.4}$ | 0.025     | 0.087  | 0.139  | 0.082 |
+|32/batch| ${NCR}_{0.6}$ | 0.010    | 0.059  | 0.099  | 0.002 |
+|32/batch| ${NCR}_{0.8}$ | 0.004    | 0.039  | 0.069  | 0     |
+|32/batch| ${NCR}_{0.9}$ | 0.002    | 0.027  | 0.051  | 0     |
+|64/batch| ${NCR}_{0.4}$ | 0.010    | 0.082  | 0.132  | 0.608 |
+|64/batch| ${NCR}_{0.6}$ | 0.003    | 0.054  | 0.093  | 0.144 |
+|64/batch| ${NCR}_{0.8}$ | 0.001    | 0.035  | 0.064  | 0.011 |
+|64/batch| ${NCR}_{0.9}$ | 0.0003   | 0.027  | 0.047  | 0.008 |
+
 ## Generator losses of NAT-GAN on multiple datasets
 
 ![](mnist_emnist_loss.svg)
