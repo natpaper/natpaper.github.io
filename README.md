@@ -203,8 +203,8 @@ NCR overfit results trained on CIFAR 10 and ILSVRC samples
 
 CIFAR 10 NCR results of 8, 32, 64 negative samples per batch (batch size 128)
 
-|Test Sets | CIFAR 100 Train Set  | CIFAR 100 Test Set | ILSVRC | Random  Noise   |
-|:-:|:-:|:-:|:-:|:-:|
+|Test Sets| NCR | CIFAR 100 Train Set  | CIFAR 100 Test Set | ILSVRC | Random  Noise   |
+|:-:|:-:|:-:|:-:|:-:|:-:|
 |8/batch| ${NCR}_{0.4}$ | 0.123     | 0.155  | 0.218  | 0.142 |
 |8/batch| ${NCR}_{0.6}$ | 0.077     | 0.111  | 0.154  | 0.001 |
 |8/batch| ${NCR}_{0.8}$ | 0.045     | 0.073  | 0.104  | 0     |
