@@ -88,6 +88,10 @@ NAT figure explanation:
 ![](ori_data.png)
 ![](nat_data.png)
 
+Original classifier (first) views negative samples $\Psi$ (gray) the same as positive samples $X$,
+while Negative-Aware Training (second) changes the domain of negative 
+samples $\Psi$ as the classifier is aware of both positive and negative samples.
+
 Our supervised classification code on CIFAR 10 is based on [pytorch-cifar](https://github.com/kuangliu/pytorch-cifar).
 
 We implement the criterion:
