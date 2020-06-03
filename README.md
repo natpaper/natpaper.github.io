@@ -1,5 +1,7 @@
 # Negative-Aware Training
 
+[**paper**](967_paper.pdf)
+
 **Please use Chrome to display videos, it may take a few seconds to load. This page is under updating!**
 
 ## 1D GAN
